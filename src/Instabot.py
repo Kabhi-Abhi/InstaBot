@@ -4,7 +4,7 @@ from getpass import getpass
 
 user = input("Enter your Instagram username/handle: ")
 pswd = getpass("Enter your password (Correctly or it'll crash after openning the browser): ")
-hndl = input("Enter instagram handle of account to like a post on: ")
+h = input("Enter instagram handle of account to like a post on: ")
 
 chrome = webdriver.Chrome('./chromedriver.exe')
 chrome.get('https://www.instagram.com')
@@ -32,7 +32,7 @@ search_field = chrome.find_element_by_class_name(' wUAXj')
 search_field.click()
 
 # Change the string to someone's Instagram username
-chrome.find_element_by_class_name('XTCLo       ').send_keys(hndl)
+chrome.find_element_by_class_name('XTCLo       ').send_keys(h)
 time.sleep(5)
 
 # clicks on first result
@@ -48,8 +48,7 @@ media.click()
 time.sleep(5)
 
 # Like it
-like = chrome.find_element_by_class_name('            coreSpriteHeartOpen       ')
-#like = chrome.find_element_by_class_name('dCJp8 afkep coreSpriteHeartOpen _0mzm-')
+like = chrome.find_element_by_class_name('fr66n')
 like.click()
 time.sleep(5)
 
