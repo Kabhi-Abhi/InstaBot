@@ -6,11 +6,7 @@ A bot that emulates an Instagram User liking a post on another account.
 1. Make sure you have python installed
 2. Install dependencies from requirements.txt `pip install -r requirements.txt`
 3. Setup selenium web driver:
-   1. Choose the driver based on your choice of Web Browser:
-       - Chrome: [Chromedriver](https://sites.google.com/a/chromium.org/chromedriver/downloads)
-       - Edge: [WebDriver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)
-       - Firefox: [Geckodriver](https://github.com/mozilla/geckodriver/releases)
-       - Safari: [WebDriver](https://webkit.org/blog/6900/webdriver-support-in-safari-10/)
+   1. Download the driver for Google Chrome: [Chromedriver](https://sites.google.com/a/chromium.org/chromedriver/downloads)
    2. Copy and paste the executable into the `Instabot/src/` directory
 4. Open a console window (bash, powershell, cmd, etc) 
 5. Change cwd(current working directory) to `Instabot/src/`
