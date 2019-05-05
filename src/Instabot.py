@@ -2,9 +2,9 @@ from selenium import webdriver
 import time
 from getpass import getpass
 
-username = input("Enter your Instagram username/handle: ")
-password = getpass("Enter your password (Correctly or it'll crash after openning the browser): ")
-handle = input("Enter instagram handle of account to like a post on: ")
+user = input("Enter your Instagram username/handle: ")
+pswd = getpass("Enter your password (Correctly or it'll crash after openning the browser): ")
+hndl = input("Enter instagram handle of account to like a post on: ")
 
 chrome = webdriver.Chrome('./chromedriver.exe')
 chrome.get('https://www.instagram.com')
@@ -15,10 +15,10 @@ login_button.click()
 time.sleep(5)
 
 username = chrome.find_element_by_class_name('_2hvTZ ')
-username.send_keys(username)
+username.send_keys(user)
 
 password_field = chrome.find_element_by_name('password')
-password_field.send_keys(password)
+password_field.send_keys(pswd)
 
 login = chrome.find_element_by_class_name('L3NKy       ')
 login.click()
@@ -32,7 +32,7 @@ search_field = chrome.find_element_by_class_name(' wUAXj')
 search_field.click()
 
 # Change the string to someone's Instagram username
-chrome.find_element_by_class_name('XTCLo       ').send_keys(handle)
+chrome.find_element_by_class_name('XTCLo       ').send_keys(hndl)
 time.sleep(5)
 
 # clicks on first result
